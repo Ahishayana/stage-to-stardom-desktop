@@ -1,0 +1,26 @@
+{
+  "name": "stage-to-stardom",
+  "version": "1.0.0",
+  "description": "From Local Stage to Global Star.",
+  "main": "main.js",
+  "author": "Stage to Stardom",
+  "license": "UNLICENSED",
+  "private": true,
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --publish never"
+  },
+  "devDependencies": {
+    "electron": "^31.0.0",
+    "electron-builder": "^24.13.3"
+  },
+  "build": {
+    "appId": "com.stagetostardom.game",
+    "productName": "Stage to Stardom",
+    "directories": { "output": "dist" },
+    "files": ["main.js", "index.html", "icon.png"],
+    "win": { "target": "portable", "icon": "icon.png" },
+    "mac": { "target": "zip", "icon": "icon.png", "category": "public.app-category.simulation-games" },
+    "linux": { "target": "AppImage", "icon": "icon.png", "category": "Game" }
+  }
+}
